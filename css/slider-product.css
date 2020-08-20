@@ -1,0 +1,153 @@
+.slider-product {
+	text-align: center;
+}
+.slider-product {
+	margin: 0 auto;
+	position:relative;
+	width:500px;
+}
+/* Slider Setup */
+.slider-product input {
+	display: none;
+}
+.slider-product .overflow {
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+}
+.slider-product .slides article img {
+	max-width: 100%;
+}
+.slider-product .slides .inner{
+	width:100%;
+	background: #fff;
+}
+.slider-product .slides article {
+	width: 6.25%;
+	float: left;
+	position:relative
+}
+/* Slider Styling */
+
+/* Control Setup */
+.slider-product .slides article a{display:inline-block; width:100%;}
+.slider-product .active {
+	text-align: center;
+	position:absolute;
+	left:0;
+	z-index:9;
+	bottom: 30px;
+	margin: 0;
+	width:100%;
+	text-align:center
+}
+.slider-product .active label {
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	margin: 0 5px;
+	cursor: pointer;
+	background: #ccc; 
+	-webkit-border-radius: 21px; 
+	-moz-border-radius: 21px;
+	border-radius: 21px;
+}
+.slider-product .active label:hover {
+	background: #57bee8;
+}
+.slider-product .controls {
+	position:absolute;
+	bottom:67%;
+	width:100%;
+	left:0;
+}
+.slider-product .controls label { 
+	position:absolute;
+	display: none;
+	width: 15px;
+	height: 20px;
+	opacity: 0;
+	z-index:9;
+	cursor:pointer;
+}
+.slider-product .controls label:hover {
+} 	
+/* Slider Styling */
+.slider-product .slides {
+	margin: 0;
+	background: #fff;
+	padding:0 20px;
+	position: relative;
+	filter: 0; /* IE6-9 */	
+}
+/* Animation */
+
+.slider-product .active{display:none;}
+.slider-product{width:100%;}
+.slider-product .slides{padding:0;  position:relative; filter: 0 !important}
+.slider-product .slides article{width:25%; padding:0 10px; text-align: left;} 
+.slider-product .slides article .images-product{border: 1px solid #ebebeb; text-align:center; width:100%;}
+.slider-product .slides article .images-product a{max-width:100%;}
+.slider-product .slides article .name-product{height:40px; overflow:hidden; margin-top:12px;}
+.slider-product .slides article .name-product a {font-size:15px; font-family: 'Kanit', sans-serif;text-transform: capitalize; color:#000000; font-weight: 300; line-height:18px;}
+.slider-product .slides article .price-product{ width:100%; margin-top:2px;}
+.slider-product .slides article .price-product span{font-size:20px; font-family: 'Kanit', sans-serif;font-weight:500; color:#000; line-height:18px; }
+.slider-product .slides article > div >p{margin-top: 20px; display: none !important}
+.slider-product .slides article > div >p a {display:inline-block; float: left; height: 37px; width: 150px; position: relative;}
+.slider-product .slides article > div >p a:after{background: #28b740; content:"VIEW DETAILS"; color: #fff; position: absolute; top:0; left: 0; width: 100%; line-height: 37px;  font-size: 14px; font-family: 'Lato', sans-serif; font-weight: 700; text-transform: uppercase;}
+
+.slider-brand .active{display:none; } 
+.slider-brand .slides{padding:0 10px;  filter: 0 !important}
+.slider-brand .slides article{ display:inline-block; height:75px; text-align: center; width:16.6%; margin: 20px 0 0 0; padding: 0 10px;}
+.slider-brand .slides article img{width:auto; max-height: 73px; max-width: 80%}
+.slider-brand .slides article > div{height:100%; width: 100%; display:table; margin:0 auto; border: 0}
+.slider-brand .slides article > div a{ display:table-cell; vertical-align:middle;}
+
+@media only screen and (min-width: 768px) {
+/************************** Cross sell 1 ******************/	
+	/* Info Box */ 
+	.product-list .slider-product .controls	{display:block}
+	.product-list .slider-product .slides .inner{margin: 0 -5px;}
+	.product-list .slider-product{width:100%;} 
+	.product-list .slider-product .slides article{width:25%; padding: 0 5px;} 
+	.product-list .slider-product .controls{bottom:52%}
+	.product-list .slider-product .active {bottom:-20px; display:none}
+	.product-list .slider-product .active label{ width:10px; height:10px; margin:0 2px}
+	
+	.slider-product .active label{display:inline-block !important;}
+	
+	/*.slider-product input ~ .slider-product .active label:nth-child(1){background:#57bee8;}*/
+	.slider-product #product1:checked ~ .active label:nth-child(1),
+	.slider-product #product2:checked ~ .active label:nth-child(2),
+	.slider-product #product3:checked ~ .active label:nth-child(3),
+	.slider-product #product4:checked ~ .active label:nth-child(4),
+	.slider-product #product5:checked ~ .active label:nth-child(5),
+	.slider-product #product6:checked ~ .active label:nth-child(6),
+	.slider-product #product7:checked ~ .active label:nth-child(7),
+	.slider-product #product8:checked ~ .active label:nth-child(8),
+	.slider-product #product9:checked ~ .active label:nth-child(9),
+	.slider-product #product10:checked ~ .active label:nth-child(10),
+	.slider-product #product11:checked ~ .active label:nth-child(11),
+	.slider-product #product12:checked ~ .active label:nth-child(12) {
+		background:none;
+		background: #000;
+	}  
+}
+
+@media (min-width: 768px)  and (max-width: 991px) {
+	.slider-product .slides article .images-product{height: 180px;}
+	.slider-product .slides article .images-product img{max-height: 180px}
+}
+@media (min-width: 640px)  and (max-width: 767px) {
+	
+}
+@media (max-width: 767px){
+	.slider-product .slides .inner{ margin: 0 -22px; width: auto;}
+	.slider-product .slides article{padding: 0 22px; width: 50%; margin: 0 0 24px;}
+}
+@media only screen and (max-width: 639px) {
+ 
+/************************** Cross sell 1 ******************/	
+.slider-product .slides .inner{margin: 0 -5px;}
+.slider-product .slides article{width: 50%; padding: 0 5px;}
+}
